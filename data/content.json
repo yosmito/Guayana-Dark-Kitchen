@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Guayana Dark Kitchen",
+    "description": "El verdadero sabor gourmet directo a tu mesa en tiempo récord."
+  },
+  "hero": {
+    "badge": "Sabores que Cruzan Fronteras",
+    "title": "Guayana <br><span class=\"text-gradient\">Dark Kitchen</span>",
+    "description": "Ingredientes premium, recetas tradicionales y un toque gourmet. La mejor comida venezolana directo a tu puerta.",
+    "backgroundImage": "assets/images/hero_background.png"
+  },
+  "menu": {
+    "title": "Nuestra <span class=\"text-gradient\">Especialidad</span>",
+    "description": "Selecciona tu categoría favorita y descubre platos con el mayor estándar de calidad.",
+    "categories": [
+      { "id": "todos", "label": "Todos" },
+      { "id": "platos", "label": "Platos Fuertes" },
+      { "id": "entradas", "label": "Entradas" },
+      { "id": "combos", "label": "Combos" }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Por qué <span class=\"text-gradient\">Elegirnos</span>",
+    "description": "Nos enfocamos en una experiencia gastronómica inigualable desde nuestra cocina hasta tu mesa."
+  },
+  "benefits": [
+    {
+      "icon": "restaurant-outline",
+      "title": "Ingredientes Premium",
+      "description": "Seleccionamos la mejor carne, vegetales frescos y quesos auténticos para un sabor inigualable."
+    },
+    {
+      "icon": "flash-outline",
+      "title": "Entrega Ultra Rápida",
+      "description": "Tu comida llega caliente, empacada herméticamente y en tiempo récord gracias a nuestro equipo."
+    },
+    {
+      "icon": "shield-checkmark-outline",
+      "title": "Cocina Higiénica",
+      "description": "Operamos bajo estrictos protocolos de bioseguridad y limpieza profunda diaria."
+    }
+  ],
+  "contact": {
+    "title": "¡Hablemos de <span class=\"text-gradient\">Sabor</span>!",
+    "description": "¿Dudas, eventos o prefieres pedir por teléfono? Escríbenos o visítanos.",
+    "address": "Alta Vista, Puerto Ordaz, Edo. Bolívar, Venezuela.",
+    "phone": "+58 (412) 000-0000",
+    "email": "pedidos@guayanadarkkitchen.com",
+    "whatsapp": "584120000000",
+    "hours": {
+      "weekdays": "Lunes a Sábado: 4:00 PM – 11:00 PM",
+      "sundays": "Domingos: 12:00 PM – 10:00 PM"
+    },
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "twitter": "#"
+    }
+  }
+}

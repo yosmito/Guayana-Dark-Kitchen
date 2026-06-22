@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hamburguesa-guayanesa",
+    "name": "Hamburguesa Guayanesa",
+    "description": "Carne premium de 180g, queso de mano fundido, bacon crujiente, cebolla caramelizada y aderezo especial de la casa.",
+    "price": 8.50,
+    "category": "platos",
+    "image": "assets/images/gourmet_burger.png",
+    "tag": "Más Vendido",
+    "available": true
+  },
+  {
+    "id": "cachapa-especial",
+    "name": "Cachapa Especial",
+    "description": "Cachapa de maíz tierno y dulce rellena de queso de mano fresco, untada con mantequilla.",
+    "price": 6.00,
+    "category": "platos",
+    "image": "assets/images/cachapa_cheese.png",
+    "tag": "Fórmula Criolla",
+    "available": true
+  },
+  {
+    "id": "tequenos-guayaneses",
+    "name": "Tequeños Guayaneses (6 uds)",
+    "description": "Masa crujiente de trigo rellena de queso blanco llanero fundido, servidos con aderezo tártara.",
+    "price": 4.50,
+    "category": "entradas",
+    "image": "assets/images/crispy_tequenos.png",
+    "tag": null,
+    "available": true
+  }
+]

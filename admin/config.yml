@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Agregar {{collection}} — {{slug}}"
+    update: "Actualizar {{collection}} — {{slug}}"
+    delete: "Eliminar {{collection}} — {{slug}}"
+    uploadMedia: "Subir {{path}}"
+    deleteMedia: "Eliminar {{path}}"
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+collections:
+  - name: "products"
+    label: "Productos"
+    label_singular: "Producto"
+    folder: "data"
+    create: true
+    delete: true
+    format: "json"
+    extension: "json"
+    slug: "{{id}}"
+    summary: "{{name}} — ${{price}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string", hint: "Identificador único, minúsculas sin espacios (ej: hamburguesa-clasica)" }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Precio ($)", name: "price", widget: "number", value_type: "float", step: 0.01, min: 0 }
+      - { label: "Categoría", name: "category", widget: "select", options: ["platos", "entradas", "combos"] }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Tag (etiqueta)", name: "tag", widget: "string", required: false, hint: "Ej: Más Vendido, Nuevo, Promoción" }
+      - { label: "Disponible", name: "available", widget: "boolean", default: true }
+
+  - name: "content"
+    label: "Contenido del Sitio"
+    files:
+      - name: "general"
+        label: "Contenido General"
+        file: "data/content.json"
+        format: "json"
+        fields:
+          - label: "Sitio"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Nombre del sitio", name: "name", widget: "string" }
+              - { label: "Descripción del footer", name: "description", widget: "string" }
+
+          - label: "Hero (Portada)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Título (puede incluir HTML)", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Imagen de fondo", name: "backgroundImage", widget: "image" }
+
+          - label: "Menú (títulos de sección)"
+            name: "menu"
+            widget: "object"
+            fields:
+              - { label: "Título de sección", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Categorías del filtro"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Etiqueta visible", name: "label", widget: "string" }
+
+          - label: "Sección Beneficios"
+            name: "benefitsSection"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+
+          - label: "Beneficios"
+            name: "benefits"
+            widget: "list"
+            fields:
+              - { label: "Ícono (Ionicons)", name: "icon", widget: "string", hint: "Ej: restaurant-outline, flash-outline" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Dirección", name: "address", widget: "string" }
+              - { label: "Teléfono", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "WhatsApp (solo números)", name: "whatsapp", widget: "string", hint: "Ej: 584120000000" }
+              - label: "Horarios"
+                name: "hours"
+                widget: "object"
+                fields:
+                  - { label: "Entre semana", name: "weekdays", widget: "string" }
+                  - { label: "Domingos", name: "sundays", widget: "string" }
+              - label: "Redes Sociales"
+                name: "social"
+                widget: "object"
+                fields:
+                  - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+                  - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+                  - { label: "Twitter URL", name: "twitter", widget: "string", required: false }
